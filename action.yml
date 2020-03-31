@@ -1,0 +1,6 @@
+name: Excel2api
+description: Convert your excel as api
+author: Ferdina Kusumah
+runs:
+  using: python3
+  main: main.py
