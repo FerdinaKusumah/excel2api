@@ -1,0 +1,6 @@
+name: 'Excel2api'
+description: 'Convert Your Excel As Api'
+runs:
+  using: 'python3'
+  image: 'main.py'
+author: 'Github'
