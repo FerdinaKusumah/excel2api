@@ -1,3 +1,6 @@
 name: 'Excel2api'
 description: 'Convert Your Excel As Api'
-author: 'FerdinaKusumah'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+author: 'Github'
