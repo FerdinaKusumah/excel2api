@@ -1,0 +1,57 @@
+2021-06-16 22:33:52,629 - uvicorn.error - INFO - Application startup complete.
+2021-06-16 22:34:50,238 - uvicorn.error - INFO - Shutting down
+2021-06-16 22:34:50,342 - uvicorn.error - INFO - Finished server process [43020]
+2021-06-16 22:38:11,575 - uvicorn.error - INFO - Application startup complete.
+2021-06-16 22:39:47,280 - uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/fastapi/applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc from None
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/middleware/cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc from None
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/routing.py", line 52, in app
+    response = await func(request)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/fastapi/routing.py", line 214, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/fastapi/routing.py", line 151, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/starlette/concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "/usr/local/opt/python@3.8/Frameworks/Python.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ferdinakusumah/Development/OPENSOURCE/excel2api/./apps/routes/excel.py", line 26, in fetch_excel
+    _result = _data.fetch(sheet_name, sheet_url, row_range, column_range)
+  File "/Users/ferdinakusumah/Development/OPENSOURCE/excel2api/./apps/controllers/excel.py", line 19, in fetch
+    df = self.fetch_excel(sheet_name, sheet_url)
+  File "/Users/ferdinakusumah/Development/OPENSOURCE/excel2api/./apps/helpers/cache.py", line 32, in decorated_function
+    if _is_cache_exists(query_hash):
+  File "/Users/ferdinakusumah/Development/OPENSOURCE/excel2api/./apps/helpers/cache.py", line 20, in _is_cache_exists
+    return not applications.conf['cache'].get(q_hash) is None
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/redis/client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/Users/ferdinakusumah/my_env/lib/python3.8/site-packages/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to redis-13137.c9.us-east-1-4.ec2.cloud.redislabs.com:13137. Connection refused.
+2021-06-16 22:39:59,138 - uvicorn.error - INFO - Shutting down
+2021-06-16 22:39:59,244 - uvicorn.error - INFO - Finished server process [44309]

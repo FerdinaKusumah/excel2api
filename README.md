@@ -33,14 +33,13 @@ Manual Installation
 * Need python 3.7+
 * Backed by python [fast api](https://github.com/tiangolo/fastapi)
 * `pip install -r requirements.txt`
-* Run with command `uvicorn app:app --reload --port 8000`
+* Run with command `uvicorn main:app --reload --port 8000`
 
 Manual Installation
 ------------
 * Need python 3.7+
 * `pip install -r requirements.txt`
 * change configuration in `conf/.env.yaml`
-* change `env` in `conf/.env.yaml`
 * Backed by python [fast api](https://github.com/tiangolo/fastapi)
 
 Running unit test
