@@ -4,7 +4,7 @@ uvicorn==0.11.7
 PyYAML==5.3
 mock==4.0.1
 starlette==0.12.9
-fastapi==0.48.0
+fastapi==0.65.2
 requests==2.23.0
 redis==3.4.1
 xlrd==1.2.0
