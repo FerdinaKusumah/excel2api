@@ -1,5 +1,14 @@
 # Convert your excel and csv as API
 
+> **⚠️ Archived: this project is no longer maintained. Don't deploy it on a public server.**
+>
+> It fetches whatever file location a request passes to it without restricting it, it turns off HTTPS certificate
+> checks, and its pinned dependencies date from 2022 (with current pandas every request fails). These will not be fixed.
+>
+> Maintained alternatives:
+> * [Datasette](https://datasette.io/) to publish your own CSV or Excel data as a JSON API, with filtering
+> * [opensheet](https://github.com/benborgers/opensheet) to read a Google Sheet as JSON
+
 It can read from excel and csv file url
 
 Documentation
